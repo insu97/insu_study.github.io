@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>R</title>
+    <meta charset = 'utf-8'>
+
+  </head>
+
+  <body>
+
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+
+    <h2><a href = "../R.html" title = "R">R</a></h2>
+
+    <ol>
+
+      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+
+    </ol>
+
+    <h3>기술통계(Descriptive Statistics)</h3>
+
+    <ol>
+
+      <li><a href = "#모집단">모집단</a></li>
+      <li><a href = "#표본">표본</a></li>
+      <li><a href = "#사분위수">사분위수</a></li>
+
+
+    </ol>
+
+    <ol>
+
+      <li><a name = "모집단"><strong>모집단</strong></a></li><br>
+
+        : 모집단(<strong>population</strong>)은 연구 대상이 되는 집단 전체
+
+        <p>
+          <table border="1">
+
+            <tr>
+              <td>평균</td>
+              <td><img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /></td>
+            </tr>
+
+            <tr>
+              <td>분산</td>
+              <td><img src="https://latex.codecogs.com/gif.latex?\sigma&space;^{2}" title="\sigma ^{2}" /></td>
+            </tr>
+
+          </table>
+      </p>
+      <li><a name = "표본"><strong>표본</strong></a></li><br>
+
+        : 표본(<strong>sample</strong>)은 연구 대상인 모집단의 특성을 조사하기 위해 추출된 모집단의 일부분
+
+        <p>
+          <table border="1">
+
+            <tr>
+              <td>평균</td>
+              <td><img src="https://latex.codecogs.com/gif.latex?\bar{X}" title="\bar{X}" /></td>
+            </tr>
+
+            <tr>
+              <td>분산</td>
+              <td><img src="https://latex.codecogs.com/gif.latex?S^{2}" title="S^{2}" /></td>
+            </tr>
+
+          </table>
+      </p>
+      <li><a name = "사분위수"><strong>사분위수</strong></a></li>
+        1 . Q1 , Q2(<strong>median</strong>) , Q3, Q4 로 나뉘며 이상치를 판단할 때 boxplot을 사용하여 확인<br>
+        2 . 이상치를 판단하는 기준 선에서 가장 작은 값은 Q1 - 1.5 * IQR(=Q3-Q1) , 가장 큰 값은 Q3 + 1.5 * IQR(=Q3-Q1)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> 이 사이에 없다면 이상치!<br>
+
+        <img src="https://www.simplypsychology.org/boxplot.jpg?ezimgfmt=rs:555x285/rscb20/ng:webp/ngcb20" title="boxplot" />
+
+    </ol>
+
+  </body>
+
+</html>

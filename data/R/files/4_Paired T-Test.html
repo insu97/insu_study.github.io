@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>R언어</title>
+    <meta charset = 'utf-8'>
+
+  </head>
+
+  <body>
+
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+
+    <h2><a href = "../R.html" title = "R">R</a></h2>
+
+    <ol>
+
+      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+
+    </ol>
+
+    <h3>Paired T-Test</h3>
+
+    <p>
+
+      -정의 : Paired T-test는 쌍을 이룬 두 변수(<strong>matched-pair</strong>)의 차이를 보는 검정<br><br>
+
+      -특징<br><br>
+      &nbsp;&nbsp;&nbsp;1 . 가장 흔한 예는 한 집단을 대상으로 어떤 개입(intervention)의 효과를 보기 위해 개입 전-후(Before-After)값을 비교하여 개입의 효과를 측정.<br>
+      &nbsp;&nbsp;&nbsp;2 . 쌍둥이 또는 부부라면 이 역시 matched-pair로 paired t-test로 차이가 있는지 검정한다.<br>
+      &nbsp;&nbsp;&nbsp;3 . 서로 연관성이 있는 두 대상으로부터 측정된 값이어서 비교하는 두 변수들 간에 상관관계가 존재한다.
+
+    <ol>
+
+      <li><a href = "#예">예</a></li>
+      <li><a href = "#분석과 해석">분석과 해석</a></li>
+
+    </ol>
+
+    <ol>
+
+      <li><a name = "예"><strong>예</strong></a></li><br>
+
+      <img src = 5.png height = 300 align = "center"><br><br>
+      => 거식증 치료제 FT를 복용 전후의 체중 변화를 측정하여 FT가 체중 감소에 영향이 있는지 조사한 실험<br>
+      => Prewt는 FT 복용 전 체중 , Postwt는 복용 후 체중<br><br>
+
+      이해 : (Postwt-Prewt)의 평균이 0인지 검정 => 즉 귀무가설이 <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" > = 0인지 검정하는 one-sample t-test.<br><br>
+
+      <li><a name = "분석과 해석"><strong>분석과 해석</strong></a></li><br>
+
+      <P>
+
+        - <strong>정규성 검정</strong><br><br>
+
+        <img src = 6.png align = "center"><br><br>
+
+        => p-value가 0.5156로 0.05보다 크므로 정규분포를 따른다는 귀무가설을 기각하지 못한다.<br><br>
+
+        - <strong>t-test</strong><br><br>
+
+        <img src = 7.png align = "center"><br><br>
+
+        => t(df=16) = 4.1849 (p-value = 0.0007003)로 유의한 차이가 없다는 귀무가설을 기각한다.<br>
+
+      </p>
+
+    </ol>
+
+  </body>
+
+</html>

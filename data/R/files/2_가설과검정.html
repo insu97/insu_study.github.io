@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>R언어</title>
+    <meta charset = 'utf-8'>
+
+  </head>
+
+  <body>
+
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+
+    <h2><a href = "../R.html" title = "R">R</a></h2>
+
+    <ol>
+
+      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+
+    </ol>
+
+    <h3>가설과 검정</h3>
+
+    <ol>
+
+      <li><a href = "#가설검정">가설검정</a></li>
+      <li><a href = "#가설설정">가설설정</a></li>
+      <li><a href = "#검정통계량">검정통계량</a></li>
+      <li><a href = "#유의수준">유의수준</a></li>
+      <li><a href = "#유의확률">유의확률</a></li>
+
+
+    </ol>
+
+    <ol>
+
+      <li><a name = "가설검정"><strong>가설검정</strong></a></li><br>
+
+      <P>
+
+         정의 : 가설검정이란 조사하고자 하는 현상을 수학적으로 표현할 수 있는 구체적인 가설로 만들고 ,<br>
+         &nbsp;가설을 입증할 수 있도록 실험이나 관찰을 수행한 후 , 그 결과를 효과적으로 요약할 수 있는 값으로 구하는 일련의 과정.<br>
+         <br>
+         * <strong>가설검정의 절차</strong><br><br>
+         1 . 귀무가설 , 대립가설 설정<br>
+         2 . 실험이나 관찰을 계획 , 수행<br>
+         3 . 실험이나 관찰을 효과적으로 요약<br>
+         4 . 요약된 값이 귀무가설하에서 쉽게 발생할 수 있는 값인지 조사<br>
+         5 . 귀무가설하에서 발생하기 힘든 값이라면 귀무가설을 기각 , 충분히 발생할 수 있는 값이라면 귀무가설을 기각하지 못한다.<br>
+
+      </p>
+
+      <li><a name = "가설설정"><strong>가설설정</strong></a></li><br>
+
+      <P>
+
+        1 . 귀무가설(<img src="https://latex.codecogs.com/gif.latex?H_{0}" title="H_{0}" />)은 실험이나 관찰을 통해서 기각하고 싶은 기존의 가설<br>
+        2 . 대립가설(<img src="https://latex.codecogs.com/gif.latex?H_{a}" title="H_{a}" />)은 실험이나 관찰을 통해서 주장하고 싶은 새로운 이론<br>
+
+      </p>
+
+      <li><a name = "검정통계량"><strong>검정통계량</strong></a></li>
+
+      <p>
+
+        정의 : 검정통계량(<strong>Test Statistic</strong>)이란 실험이나 관찰을 수행하여 얻은 자료를 적은 수의 통계값으로 요약된 값<br><br>
+
+        => 검정통계량이 귀무가설이 사실(True)인 경우에 충분히 나올 가능성이 있는 값이라 생각되면 귀무가설을 기각하지 않는다 . <br>
+        => 검정통계량이 귀무가설하에서 나오기 힘든 값이라면 귀무가설을 기각한다 . <br>
+
+      </p>
+
+      <li><a name = "유의수준"><strong>유의수준</strong></a></li>
+
+      <p>
+
+        정의 : 유의수준(<strong>Level of Significance</strong>) <img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" />는 어느 정도 드문 현상을 유의하다고 결정하느냐의 기준<br><br>
+
+        => 보통 <img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" />는 0.05 즉 5%로 설정 => 이 기준에 의하면 실험이나 관찰을 수행한 후 얻은 검정통계량이 귀무가설하에서 나올 가능성이 5% 이하일 때 귀무가설을 기각한다.<br>
+
+      </p>
+
+      <li><a name = "유의확률"><strong>유의확률</strong></a></li>
+
+      <p>
+
+        정의 : 유의확률(<strong>P-value</strong>)은 귀무가설하에서 관찰된 검정통계량보다 더 대립가설을 지지하는 방향으로 나올 확률이다.<br><br>
+
+        특징<br>
+        1 . 유의확률은 확률이므로 0~1사이의 값을 갖는다.<br>
+        2 . 유의확률은 실험이나 관찰에서 나온 검정통계량이 귀무가설을 지지하는 정도<br>
+        &nbsp;&nbsp;=> If p-value가 0.001과 같이 0에 가까운 매우 작은 값이 나오면 , then 귀무가설을 지지하는 정도가 매우 약하므로 귀무가설을 기각한다.<br>
+        &nbsp;&nbsp;=> 의사 결정의 기준이 바로 유의수준 <img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" />로 ,
+        <img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /> = 0.05일 때 p-value가 유의수준 0.05보다 작으면 귀무가설을 기각하고 0.05보다 크면 귀무가설을 기각하지 못한다.<br>
+
+      </p>
+
+    </ol>
+
+  </body>
+
+</html>
