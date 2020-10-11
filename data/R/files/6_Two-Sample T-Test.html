@@ -6,117 +6,121 @@
 
     <title>R</title>
     <meta charset = 'utf-8'>
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css" />
 
   </head>
 
   <body>
 
     <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline" style = "font-size : 13px;">
+          <h2><a href = "../R.html" title = "R">R</a></h2>
 
-    <h2><a href = "../R.html" title = "R">R</a></h2>
+          <ol>
 
-    <ol>
+            <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+            <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+            <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+            <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+            <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+            <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
 
-      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
-      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
-      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
-      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
-      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
-      <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
+          </ol>
+        </div>
+        <div id = "div-top">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol>
+            <li><a href = "#순서">순서</a></li>
+            <li><a href = "#예시">예시</a></li>
+            <li><a href = "#분석과해석1">분석과해석1</a></li>
+            <li><a href = "#분석과해석2">분석과해석2</a></li>
+            <li><a href = "#정규성 검정">정규성 검정</a></li>
+          </ol>
+        </div>
+      </div>
+      <div style = "padding-left : 20px;">
+      <strong>Two-Sample T-Test</strong><br>
+      &nbsp;&nbsp;: 서로 독립적인 두 집단의 평균의 차이가 0인지를 검정<br>
+      &nbsp;&nbsp;[EX) 실험군과 대조군에 서로 다른 개입을 적용시킨 후 두 집단의 평균이 같은지를 비교하여 개입 효과의 차이를 평가하는 것.]
+      <ol>
 
-    </ol>
+        <li><a name = "순서"><strong>순서</strong></a></li><br>
 
-    <h3>Two-Sample T-Test</h3>
-    &nbsp;&nbsp;: 서로 독립적인 두 집단의 평균의 차이가 0인지를 검정한다. => EX) 실험군과 대조군에 서로 다른 개입을 적용시킨 후 두 집단의 평균이 같은지를 비교하여 개입 효과의 차이를 평가하는 것.
+          <ol>
+            <li>두 집단의 분산이 같은지 검정한다.</li>
+            <li>분산이 다르면 Welch의 t-test를 적용한다.</li>
+            <li>분산이 같으면 pooled variance를 이용한 t-test를 적용한다.</li>
+          </ol><br>
 
-    <ol>
+        <li><a name = "예시"><strong>예시</strong></a></li><br>
 
-      <li><a href = "#순서">순서</a></li>
-      <li><a href = "#예시">예시</a></li>
-      <li><a href = "#분석과해석1">분석과해석1</a></li>
-      <li><a href = "#분석과해석2">분석과해석2</a></li>
-      <li><a href = "#정규성 검정">정규성 검정</a></li>
+        <img src="4.png" align="middle"/>다른 두 조건(control , test)에서 배양된 뼈세포의 수(resp)를 측정한 자료<br><br>
 
-
-    </ol>
-
-    <ol>
-
-      <li><a name = "순서"><strong>순서</strong></a></li><br>
+        <li><a name = "분석과해석1"><strong>분석과해석1</strong></a></li><br>
 
         <ol>
-          <li>두 집단의 분산이 같은지 검정한다.</li>
-          <li>분산이 다르면 Welch의 t-test를 적용한다.</li>
-          <li>분산이 같으면 pooled variance를 이용한 t-test를 적용한다.</li>
-        </ol><br>
+          <li>Boxplot</li><br>
+            : 분석 이전에 Boxplot을 그려 두 그룹의 분포의 차이가 있는지 확인한다.<br>
+          <img src="5.png" align/><img src="6.png"/><br>
+          ==> 변환 전에 비해 분산의 차이가 많이 좁혀졌음을 알 수 있다.<br><br>
 
-      <li><a name = "예시"><strong>예시</strong></a></li><br>
+          <li>등분산 검정</li><br>
+            : 두 집단의 분산이 같은지 확인 <br><br>
+          <img src="7.png"/><br>
 
-      <img src="4.png" align="middle"/>다른 두 조건(control , test)에서 배양된 뼈세포의 수(resp)를 측정한 자료<br><br>
+          <p>
+            귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+            대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+            검정통계량 : F(df1 = 4 , df2 = 4) = 0.3432<br>
+            p-value : 0.325 > 0.05<br>
+            결정 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+          </p>
 
-      <li><a name = "분석과해석1"><strong>분석과해석1</strong></a></li><br>
+          <li>분산이 같은 경우 : pooled variance 이용</li><br>
+          <img src="8.png"/><br><br>
+          <p>
+            귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
+            대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
+            검정통계량 : t(df=8) = -2.5217<br>
+            p-value : 0.03571 < 0.05<br>
+            결정 : 두 집단의 평균이 다르다.<br>
+          </p>
 
-      <ol>
-        <li>Boxplot</li><br>
-          : 분석 이전에 Boxplot을 그려 두 그룹의 분포의 차이가 있는지 확인한다.<br>
-        <img src="5.png" align/><img src="6.png"/><br>
-        ==> 변환 전에 비해 분산의 차이가 많이 좁혀졌음을 알 수 있다.<br><br>
+        </ol>
 
-        <li>등분산 검정</li><br>
-          : 두 집단의 분산이 같은지 확인 <br><br>
-        <img src="7.png"/><br>
 
-        <p>
-          귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-          대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-          검정통계량 : F(df1 = 4 , df2 = 4) = 0.3432<br>
-          p-value : 0.325 > 0.05<br>
-          결정 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-        </p>
+        <li><a name = "분석과해석2"><strong>분석과해석2</strong></a></li><br>
+        <ol>
+          <li>등분산검정</li><br>
+            : 데이터가 log-normal 분포를 따른다는 사실을 무시하고 log-변환 없이 원래 값으로 t-test를 해보자.<br><br>
+          <img src="9.png"/><br><br>
+          <p>
+            귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+            대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+            검정통계량 : F(df1 = 4 , df2 = 4) = 0.0849<br>
+            p-value : 0.03483 < 0.05<br>
+            결정 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
+          </p>
 
-        <li>분산이 같은 경우 : pooled variance 이용</li><br>
-        <img src="8.png"/><br><br>
-        <p>
-          귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
-          대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
-          검정통계량 : t(df=8) = -2.5217<br>
-          p-value : 0.03571 < 0.05<br>
-          결정 : 두 집단의 평균이 다르다.<br>
-        </p>
+          <li>분산이 다른 경우 : Welch의 t-test</li><br>
+          <img src="10.png"/><br><br>
+          <p>
+            귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
+            대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
+            검정통계량 : t(df=4.674) = -2.1333<br>
+            p-value : 0.08988 > 0.05<br>
+            결정 : 평균이 같다는 귀무가설을 기각하지 못한다.<br>
 
+            ==> log-변환해야 하는 변수를 변환 없이 분석하면 유의하지 않은 결과가 나온다.<br>
+          </p>
+        </ol>
+        <li><a name = "정규성 검정"><strong>정규성 검정</strong></a></li><br>
+        <img src="11.png"/><br><br>
+        ==> p-value = 0.2157로 정규분포 가정에 문제가 없음.<br>
       </ol>
-
-
-      <li><a name = "분석과해석2"><strong>분석과해석2</strong></a></li><br>
-      <ol>
-        <li>등분산검정</li><br>
-          : 데이터가 log-normal 분포를 따른다는 사실을 무시하고 log-변환 없이 원래 값으로 t-test를 해보자.<br><br>
-        <img src="9.png"/><br><br>
-        <p>
-          귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-          대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-          검정통계량 : F(df1 = 4 , df2 = 4) = 0.0849<br>
-          p-value : 0.03483 < 0.05<br>
-          결정 : <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{1}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{1}^{2}" title="\sigma _{1}^{2}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;_{2}^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;_{2}^{2}" title="\sigma _{2}^{2}" /></a><br>
-        </p>
-
-        <li>분산이 다른 경우 : Welch의 t-test</li><br>
-        <img src="10.png"/><br><br>
-        <p>
-          귀무가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
-          대립가설 : <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{1}" title="\mu _{1}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\neq" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\mu&space;_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mu&space;_{2}" title="\mu _{2}" /></a><br>
-          검정통계량 : t(df=4.674) = -2.1333<br>
-          p-value : 0.08988 > 0.05<br>
-          결정 : 평균이 같다는 귀무가설을 기각하지 못한다.<br>
-
-          ==> log-변환해야 하는 변수를 변환 없이 분석하면 유의하지 않은 결과가 나온다.<br>
-        </p>
-      </ol>
-      <li><a name = "정규성 검정"><strong>정규성 검정</strong></a></li><br>
-      <img src="11.png"/><br><br>
-      ==> p-value = 0.2157로 정규분포 가정에 문제가 없음.<br>
-    </ol>
-
+    </div>
+  </div>
   </body>
-
 </html>

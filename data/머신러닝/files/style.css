@@ -5,9 +5,11 @@ body {
 
 .file-upload {
   background-color: #ffffff;
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 20px;
+
 }
 
 .file-upload-btn {
@@ -55,14 +57,14 @@ body {
 
 .image-upload-wrap {
   margin-top: 20px;
-  border: 4px dashed #1FB264;
+  border: 1px dashed #1FB264;
   position: relative;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
   background-color: #1FB264;
-  border: 4px dashed #ffffff;
+  border: 1px dashed #ffffff;
 }
 
 .image-title-wrap {

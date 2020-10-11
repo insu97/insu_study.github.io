@@ -6,71 +6,76 @@
 
     <title>기본개념</title>
     <meta charset = 'utf-8'>
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css" />
 
   </head>
 
   <body>
 
     <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline">
+          <h2><a href = "../database.html" title = "database">Database</a></h2>
 
-    <h2><a href = "../database.html" title = "database">database</a></h2>
+          <ol>
 
-    <ol>
+            <li><a href = "1_기본개념.html"  title = "기본개념">기본개념</a></li>
+            <li><a href = "2_DBMS.html"  title = "DBMS">DBMS</a></li>
+            <li><a href = "3_데이터베이스 시스템.html"  title = "데이터베이스 시스템">데이터베이스 시스템</a></li>
+            <li><a href = "4_데이터모델링.html"  title = "데이터모델링">데이터모델링</a></li>
 
-      <li><a href = "1_기본개념.html"  title = "기본개념">기본개념</a></li>
-      <li><a href = "2_DBMS.html"  title = "DBMS">DBMS</a></li>
-      <li><a href = "3_데이터베이스 시스템.html"  title = "데이터베이스 시스템">데이터베이스 시스템</a></li>
-      <li><a href = "4_데이터모델링.html"  title = "데이터모델링">데이터모델링</a></li>
-
-    </ol>
-
-    <h3><a href = "3_데이터베이스 시스템.html"  title = "데이터베이스 시스템">데이터베이스 시스템</a></h3>
-
-    <ol>
-
-      <li><a href = "#1">데이터베이스 시스템 정의</a></li>
-      <li><a href = "#2">Database의 구조</a></li>
-      <li><a href = "#3">데이터 언어</a></li>
-
-    </ol>
-
-      <p>
-
-        <li><a name = "1">데이터베이스 시스템 정의</a></li>
-
+          </ol>
+        </div>
+        <div id = "div-top">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol  style = "font-size : 15px;">
+            <li><a href = "#1">데이터베이스 시스템 정의</a></li>
+            <li><a href = "#2">Database의 구조</a></li>
+            <li><a href = "#3">데이터 언어</a></li>
+          </ol>
+        </div>
+      </div>
+      <div style = "padding-left : 20px;">
         <p>
-        &nbsp;&nbsp;&nbsp; : 데이터베이스 시스템은 데이터베이스에 데이터를 저장하고 , 저장된 데이터를 관리하여 조직에 필요한 정보를 생성해주는 시스템<br><br>
-        </p>
 
-        <li><a name = "2">Database의 구조</a></li>
+          <li><a name = "1">데이터베이스 시스템 정의</a></li>
 
-        <ol>
-          <li>스키마</li>
-            : 스키마는 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것.<br><br>
-          <li>인스턴스</li>
-            : 정의된 스키마에 따라 데이터베이스에 실제로 저장된 값이 인스턴스.
-        </Ol>
-
-        <li><a name = "3">데이터 언어</a></li><br>
-
-        <ol>
-        <li>데이터 정의어(DDL)</li>
-        &nbsp;: 데이터 정의어는 새로운 데이터베이스를 구축하기 위해 스키마를 정의하거나 기존 스키마의 정의를 삭제 또는 수정하기 위해 사용하는 데이터 언어.<br><br>
-
-        <li>데이터 조작어(DML)</li>
-        &nbsp;: 데이터 조작어는 사용자가 데이터의 삽입*삭제*수정*검색 등의 처리를 데이터베이스 관리 시스템에 요구하기 위해 사용하는 데이터 언어.<br><br>
-
-        <li>데이터 제어어(DCL)</li>
-        &nbsp;: 데이터 제어어는 데이터베이스에 저장된 데이터를 여러 사용자가 무결성과 일관성을 유지하며 문제없이 공유할 수 있도록 , 내부적으로 필요한 규칙이나 기법을 정의하는 데 사용하는 데이터 언어.<br>
           <p>
-            &nbsp;&nbsp;1 . 무결성 : 데이터베이스에 정확하고 유효한 데이터만 유지한다.<br>
-            &nbsp;&nbsp;2 . 보안 : 허가받지 않는 사용자가 데이터에 접근하는 것을 차단하거나 , 허가된 사용자가 접근 권한이 있는 데이터에만 접근할 수 있게 된다.<br>
-            &nbsp;&nbsp;3 . 회복 : 장애가 발생해도 데이터의 일관성을 유지한다.<br>
-            &nbsp;&nbsp;4 . 동시성 : 여러 사용자가 같은 데이터에 동시에 접근하여 처리할 수 있게 한다.<br>
+          &nbsp;&nbsp;&nbsp; : 데이터베이스 시스템은 데이터베이스에 데이터를 저장하고 , 저장된 데이터를 관리하여 조직에 필요한 정보를 생성해주는 시스템<br><br>
           </p>
-        </ol>
 
-      </p>
+          <li><a name = "2">Database의 구조</a></li>
+
+          <ol>
+            <li>스키마</li>
+              : 스키마는 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것.<br><br>
+            <li>인스턴스</li>
+              : 정의된 스키마에 따라 데이터베이스에 실제로 저장된 값이 인스턴스.
+          </Ol>
+
+          <li><a name = "3">데이터 언어</a></li><br>
+
+          <ol>
+          <li>데이터 정의어(DDL)</li>
+          &nbsp;: 데이터 정의어는 새로운 데이터베이스를 구축하기 위해 스키마를 정의하거나 기존 스키마의 정의를 삭제 또는 수정하기 위해 사용하는 데이터 언어.<br><br>
+
+          <li>데이터 조작어(DML)</li>
+          &nbsp;: 데이터 조작어는 사용자가 데이터의 삽입*삭제*수정*검색 등의 처리를 데이터베이스 관리 시스템에 요구하기 위해 사용하는 데이터 언어.<br><br>
+
+          <li>데이터 제어어(DCL)</li>
+          &nbsp;: 데이터 제어어는 데이터베이스에 저장된 데이터를 여러 사용자가 무결성과 일관성을 유지하며 문제없이 공유할 수 있도록 , 내부적으로 필요한 규칙이나 기법을 정의하는 데 사용하는 데이터 언어.<br>
+            <p>
+              &nbsp;&nbsp;1 . 무결성 : 데이터베이스에 정확하고 유효한 데이터만 유지한다.<br>
+              &nbsp;&nbsp;2 . 보안 : 허가받지 않는 사용자가 데이터에 접근하는 것을 차단하거나 , 허가된 사용자가 접근 권한이 있는 데이터에만 접근할 수 있게 된다.<br>
+              &nbsp;&nbsp;3 . 회복 : 장애가 발생해도 데이터의 일관성을 유지한다.<br>
+              &nbsp;&nbsp;4 . 동시성 : 여러 사용자가 같은 데이터에 동시에 접근하여 처리할 수 있게 한다.<br>
+            </p>
+          </ol>
+
+        </p>
+      </div>
+    </div>
 
   </body>
 

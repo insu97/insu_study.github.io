@@ -6,126 +6,126 @@
 
     <title>R언어</title>
     <meta charset = 'utf-8'>
-
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css" />
   </head>
 
   <body>
 
-    <h1><a href = "../../../study.py" title = "study">공부</a></h1>
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline" style = "font-size : 13px;">
+          <h2><a href = "../html.py" title = "R">R</a></h2>
 
-    <h2><a href = "../R.py" title = "R">R</a></h2>
+          <ol>
 
-    <ol>
+            <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+            <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+            <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+            <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+            <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+            <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
 
-      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
-      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
-      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
-      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
-      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
-      <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
+          </ol>
+        </div>
+        <div id = "div-top">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol>
+            <li><a href = "#T-분포">T-분포</a></li>
+            <li><a href = "#검정통계량">검정통계량</a></li>
+            <li><a href = "#유의확률">유의확률</a></li>
+            <li><a href = "#분석과 해석">분석과 해석</a></li>
+            <li><a href = "#기타">기타</a></li>
+          </ol>
+        </div>
+        </div>
+        <div style = "padding-left : 20px;"><br>
+          <strong>One_Sample T-test</strong><br>
+          &nbsp;&nbsp;&nbsp;: One-Sample T-test는 한 모집단의 평균이 어떤 특정한 값과 같은지 검증하는 통계 방법<br><br>
 
-    </ol>
+          특징<br><br>
+          1 . One-Sample T-test를 포함한 모든 <strong>t-test</strong>는 자료가 정규분포를 따른다고 가정
+            <ol>
 
-    <h3>One-Sample T-test</h3>
+              <li><a name = "T-분포"><strong>T-분포</strong></a></li>
 
-    <p>
+              <img src = "https://raw.githubusercontent.com/wjddyd66/wjddyd66.github.io/master/static/img/others/29.png" height = 300 align = "right">
 
-      정의 : One-Sample T-test는 한 모집단의 평균이 어떤 특정한 값과 같은지 검증하는 통계 방법<br><br>
+              <P>
 
-      특징<br>
-      1 . One-Sample T-test를 포함한 모든 <strong>t-test</strong>는 자료가 정규분포를 따른다고 가정
+                1 . Var(<img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" />) = <img src="https://latex.codecogs.com/gif.latex?\frac{\sigma&space;^{2}}{n}" title="\frac{\sigma ^{2}}{n}" height = "30"/><br><br>
+                2 . sd(<img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" />) = <img src="https://latex.codecogs.com/gif.latex?\frac{\sigma&space;}{\sqrt{n}}" title="\frac{\sigma }{\sqrt{n}}" height = "30"/><br><br>
+                3 . Z = <img src="https://latex.codecogs.com/gif.latex?\frac{\bar{x}-\mu}{\sigma/\sqrt{n}&space;}" title="\frac{\bar{x}-\mu}{\sigma/\sqrt{n} }" height = "30"/> = <img src="https://latex.codecogs.com/gif.latex?\frac{\sqrt{n}(\bar{x}-\mu)}{\sigma&space;}" title="\frac{\sqrt{n}(\bar{x}-\mu)}{\sigma }" height = "30"/> ~ N(0,1)    => Z는 평균이 0 표준편차가 1인 표본정규분포를 따른다.<br><br>
+                4 . t = <img src="https://latex.codecogs.com/gif.latex?\frac{\bar{x}-\mu}{s/\sqrt{n}}" title="\frac{\bar{x}-\mu}{s/\sqrt{n}}" height = "30"/> = <img src="https://latex.codecogs.com/gif.latex?\frac{\sqrt{n}(\bar{x}-\mu)}{s}" title="\frac{\sqrt{n}(\bar{x}-\mu)}{s}" height = "30"/> ~ t(n-1)    => t는 자유도가 (n-1)인 t-분포를 따른다.<br><br>
 
+              </p>
 
-    <ol>
+              <li><a name = "검정통계량"><strong>검정통계량</strong></a></li><br>
 
-      <li><a href = "#T-분포">T-분포</a></li>
-      <li><a href = "#검정통계량">검정통계량</a></li>
-      <li><a href = "#유의확률">유의확률</a></li>
-      <li><a href = "#분석과 해석">분석과 해석</a></li>
-      <li><a href = "#기타">기타</a></li>
+              <P>
 
+                Ex ) 2006년 1인 1일 평균 알코올 섭취량 = 8.1 , x = 15.50,11.21,12.67,8.87,12.15,9.88,2.06,14.50,0.00,4.97(x는 2008년 알코올 섭취량)<br><br>
 
-    </ol>
+                => mean(x) = 9.181 , sd(x) = 5.234965   => mean(x) - 8.1 = 1.081<br>
+                &nbsp;&nbsp;&nbsp;-> 1.081이라는 차이가 귀무가설하에서 우연히 발생할 수 있는 차이라고 보고 2008년 알코올 섭취량이 2006년 알코올 섭취량에 비해 특별히 다르지 않다는 결론<br>
+                &nbsp;&nbsp;&nbsp;-> 1.081이라는 차이를 크다고 보고 유의한 차이가 있다는 결론<br><br>
 
-    <ol>
+                => 검정통계량 = sqrt(length(x))*(mean(x)-8.1)/sd(x) = 0.6529981<br>
+                &nbsp;&nbsp;&nbsp;-> 이 t값 0.653은 2008년 알코올 섭취량의 진짜 평균이 8.1이라면 자유도가 9인 t분포를 따른다.<br>
+                &nbsp;&nbsp;&nbsp;-> 이 t값 0.653이 0으로부터 많이 멀다면 평균이 8.1일 가능성이 낮아 평균이 8.1이라는 귀무가설을 기각하고 , 그렇지 않다면 귀무가설을 기각하지 않는다.<br>
 
-      <li><a name = "T-분포"><strong>T-분포</strong></a></li>
+              </p>
 
-      <img src = "https://raw.githubusercontent.com/wjddyd66/wjddyd66.github.io/master/static/img/others/29.png" height = 300 align = "right">
+              <li><a name = "유의확률"><strong>유의확률</strong></a></li>
 
-      <P>
+              <p>
 
-        1 . Var(<img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" />) = <img src="https://latex.codecogs.com/gif.latex?\frac{\sigma&space;^{2}}{n}" title="\frac{\sigma ^{2}}{n}" height = "30"/><br><br>
-        2 . sd(<img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" />) = <img src="https://latex.codecogs.com/gif.latex?\frac{\sigma&space;}{\sqrt{n}}" title="\frac{\sigma }{\sqrt{n}}" height = "30"/><br><br>
-        3 . Z = <img src="https://latex.codecogs.com/gif.latex?\frac{\bar{x}-\mu}{\sigma/\sqrt{n}&space;}" title="\frac{\bar{x}-\mu}{\sigma/\sqrt{n} }" height = "30"/> = <img src="https://latex.codecogs.com/gif.latex?\frac{\sqrt{n}(\bar{x}-\mu)}{\sigma&space;}" title="\frac{\sqrt{n}(\bar{x}-\mu)}{\sigma }" height = "30"/> ~ N(0,1)    => Z는 평균이 0 표준편차가 1인 표본정규분포를 따른다.<br><br>
-        4 . t = <img src="https://latex.codecogs.com/gif.latex?\frac{\bar{x}-\mu}{s/\sqrt{n}}" title="\frac{\bar{x}-\mu}{s/\sqrt{n}}" height = "30"/> = <img src="https://latex.codecogs.com/gif.latex?\frac{\sqrt{n}(\bar{x}-\mu)}{s}" title="\frac{\sqrt{n}(\bar{x}-\mu)}{s}" height = "30"/> ~ t(n-1)    => t는 자유도가 (n-1)인 t-분포를 따른다.<br><br>
+                1 . <img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;\mu&space;\right&space;|" title="\left | \mu \right |" height = 17/> ->  2*(1-pt(0.653,df=9)) = 0.5300818<br>
+                2 . <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" > -> 1-pt(0.653,df=9) = 0.2650409<br>
 
-      </p>
+              </p>
 
-      <li><a name = "검정통계량"><strong>검정통계량</strong></a></li><br>
+              <li><a name = "분석과 해석"><strong>분석과 해석</strong></a></li>
 
-      <P>
+              <p>
 
-        Ex ) 2006년 1인 1일 평균 알코올 섭취량 = 8.1 , x = 15.50,11.21,12.67,8.87,12.15,9.88,2.06,14.50,0.00,4.97(x는 2008년 알코올 섭취량)<br><br>
+                먼저 <strong>정규성 검정</strong>을 한 후 데이터가 정규분포를 따르면 t-test를 한다.<br><br>
 
-        => mean(x) = 9.181 , sd(x) = 5.234965   => mean(x) - 8.1 = 1.081<br>
-        &nbsp;&nbsp;&nbsp;-> 1.081이라는 차이가 귀무가설하에서 우연히 발생할 수 있는 차이라고 보고 2008년 알코올 섭취량이 2006년 알코올 섭취량에 비해 특별히 다르지 않다는 결론<br>
-        &nbsp;&nbsp;&nbsp;-> 1.081이라는 차이를 크다고 보고 유의한 차이가 있다는 결론<br><br>
+                - <strong>정규성 검정</strong><br><br>
+                <img src = "1.png"><br><br>
+                => 귀무가설 : x가 정규분포를 따른다 .<br>
+                => 대립가설 : x가 정규분포를 따르지 않는다 . <br>
+                => 검정통계량 : W = 0.9234<br>
+                => p-value : 0.3863 > 0.05<br>
+                => 결론 : x가 정규분포를 따른다<br>
 
-        => 검정통계량 = sqrt(length(x))*(mean(x)-8.1)/sd(x) = 0.6529981<br>
-        &nbsp;&nbsp;&nbsp;-> 이 t값 0.653은 2008년 알코올 섭취량의 진짜 평균이 8.1이라면 자유도가 9인 t분포를 따른다.<br>
-        &nbsp;&nbsp;&nbsp;-> 이 t값 0.653이 0으로부터 많이 멀다면 평균이 8.1일 가능성이 낮아 평균이 8.1이라는 귀무가설을 기각하고 , 그렇지 않다면 귀무가설을 기각하지 않는다.<br>
+                - <strong>t-test</strong><br><br>
+                <img src = "2.png"><br><br>
+                => 귀무가설 : <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> = 8.1<br>
+                => 대립가설 : <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> <img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /> 8.1<br>
+                => 검정통계량 : t(df=9) = 0.653<br>
+                => p-value : 0.5301 > 0.05<br>
+                => 결론 : 2008년 평균 음주량은 8.1과 유의한 차이가 없다.<br>
 
-      </p>
+              </p>
 
-      <li><a name = "유의확률"><strong>유의확률</strong></a></li>
+              <li><a name = "기타"><strong>기타</strong></a></li>
 
-      <p>
+              <p>
 
-        1 . <img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;\mu&space;\right&space;|" title="\left | \mu \right |" height = 17/> ->  2*(1-pt(0.653,df=9)) = 0.5300818<br>
-        2 . <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" > -> 1-pt(0.653,df=9) = 0.2650409<br>
+                <strong>단측 검정</strong><br><br>
+                <img src = "3.png"><br><br>
+                => alter = "greater" =>  대립가설이 <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> > 8.1<br>
+                => alter = "less" => 대립가설이 <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> < 8.1<br><br>
 
-      </p>
+                <strong>유의수준 설정</strong><br><br>
+                <img src = "4.png"><br><br>
 
-      <li><a name = "분석과 해석"><strong>분석과 해석</strong></a></li>
+              </p>
 
-      <p>
-
-        먼저 <strong>정규성 검정</strong>을 한 후 데이터가 정규분포를 따르면 t-test를 한다.<br><br>
-
-        - <strong>정규성 검정</strong><br><br>
-        <img src = "1.png"><br><br>
-        => 귀무가설 : x가 정규분포를 따른다 .<br>
-        => 대립가설 : x가 정규분포를 따르지 않는다 . <br>
-        => 검정통계량 : W = 0.9234<br>
-        => p-value : 0.3863 > 0.05<br>
-        => 결론 : x가 정규분포를 따른다<br>
-
-        - <strong>t-test</strong><br><br>
-        <img src = "2.png"><br><br>
-        => 귀무가설 : <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> = 8.1<br>
-        => 대립가설 : <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> <img src="https://latex.codecogs.com/gif.latex?\neq" title="\neq" /> 8.1<br>
-        => 검정통계량 : t(df=9) = 0.653<br>
-        => p-value : 0.5301 > 0.05<br>
-        => 결론 : 2008년 평균 음주량은 8.1과 유의한 차이가 없다.<br>
-
-      </p>
-
-      <li><a name = "기타"><strong>기타</strong></a></li>
-
-      <p>
-
-        <strong>단측 검정</strong><br><br>
-        <img src = "3.png"><br><br>
-        => alter = "greater" =>  대립가설이 <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> > 8.1<br>
-        => alter = "less" => 대립가설이 <img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" /> < 8.1<br><br>
-
-        <strong>유의수준 설정</strong><br><br>
-        <img src = "4.png"><br><br>
-
-      </p>
-
-    </ol>
+            </ol>
+          </div>
+        </div>
 
   </body>
 

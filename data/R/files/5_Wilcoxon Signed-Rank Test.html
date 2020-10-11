@@ -6,70 +6,75 @@
 
     <title>R</title>
     <meta charset = 'utf-8'>
-
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css" />
   </head>
 
   <body>
 
-    <h1><a href = "../../../study.py" title = "study">공부</a></h1>
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline" style = "font-size : 13px;">
+          <h2><a href = "../R.html" title = "R">R</a></h2>
 
-    <h2><a href = "../R.py" title = "R">R</a></h2>
+          <ol>
 
-    <ol>
+            <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
+            <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
+            <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
+            <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
+            <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
+            <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
 
-      <li><a href = "1_기술통계.html"  title = "기술통계">기술통계</a></li>
-      <li><a href = "2_가설과검정.html" title = "가설과검정">가설과 검정</a></li>
-      <li><a href = "3_One-Sample T-test.html" title = "One-Sample T-test">One-Sample T-test</a></li>
-      <li><a href = "4_Paired T-Test.html" title = "Paired T-Test">Paired T-Test</a></li>
-      <li><a href = "5_Wilcoxon Signed-Rank Test.html" title = "Wilcoxon Signed-Rank Test">Wilcoxon Signed-Rank Test</a></li>
-      <li><a href = "6_Two-Sample T-Test.html" title = "Two-Sample T-Test">Two-Sample T-Test</a></li>
+          </ol>
+        </div>
+        <div id = "div-top">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol>
+            <li><a href = "#중위수">중위수</a></li>
+            <li><a href = "#예시">예시</a></li>
+            <li><a href = "#정규성검정">정규성검정</a></li>
+            <li><a href = "#차이의검정">차이의검정</a></li>
+          </ol>
+        </div>
+      </div>
+      <div style = "padding-left : 20px;">
+        <strong>Wilcoxon Signed-Rank Test</strong><br>
+        &nbsp;: 자료가 정규분포를 따르지 않는다면 비모수 방법(Nonparanetric method)을 이용 => one_sample t-test 와 paired t-test에 해당하는 비모수 방법은 Wilcoxon signed-rank test
 
-    </ol>
+        <ol>
 
-    <h3>Wilcoxon Signed-Rank Test</h3>
-    &nbsp;&nbsp;: 자료가 정규분포를 따르지 않는다면 비모수 방법(Nonparanetric method)을 이용해야 하는데 one_sample t-test 와 paired t-test에 해당하는 비모수 방법은 Wilcoxon signed-rank test이다.
+          <li><a name = "중위수"><strong>중위수</strong></a></li><br>
 
-    <ol>
+            : Wilcoxon Signed-Rank Test는 자료의 순서를 사용하여 자료의 중위수(median)가 0인지 검정.<br>
+            &nbsp;&nbsp;=> 양수인 데이터의 수와 음수인 데이터의 수가 같다면 중위수가 0이다.<br>
 
-      <li><a href = "#중위수">중위수</a></li>
-      <li><a href = "#예시">예시</a></li>
-      <li><a href = "#정규성검정">정규성검정</a></li>
-      <li><a href = "#차이의검정">차이의검정</a></li>
+          <li><a name = "예시"><strong>예시</strong></a></li><br>
 
+          <img src="1.png" align="middle"/>Prewt : CBT라는 약 복용 전 체중 , Postwt는 복용 후 체중<br>
 
-    </ol>
+          <li><a name = "정규성검정"><strong>정규성검정</strong></a></li><br>
+          <img src="2.png" align="middle"/>=> p-value가 0.007945로 정규분포를 따른다는 귀무가설을 기각한다.<br>
 
-    <ol>
+          <p>
+            1 . 귀무가설 : CBT 복용 전후 몸무게 차이가 정규분포를 따른다.<br>
+            2 . 대립가설 : CBT 복용 전후 몸무게 차이가 정규분포를 따르지 않는다.<br>
+            3 . 검정통계량 : W = 0.8962<br>
+            4 . p-value = 0.007945 < 0.05<br>
+            5 . 결정 : CBT 복용 전후 몸무게 차이가 정규분포를 따르지 않는다. => 즉 비모수 방법을 이용해야 한다.<br>
+          </p>
 
-      <li><a name = "중위수"><strong>중위수</strong></a></li><br>
+          <li><a name = "차이의검정"><strong>차이의검정</strong></a></li><br>
+          <img src="3.png" align="middle"/>p-value = 0.06447로 유의하지 않은 결과가 나왔다.<br>
+          1 . 귀무가설 : CBT 복용 전후 몸무게 차이의 median은 0이다.<br>
+          2 . 대립가설 : CBT 복용 전후 몸무게 차이의 median은 0이 아니다.<br>
+          3 . 검정통계량 : V = 303.5<br>
+          4 . p-value = 0.06447 > 0.05<br>
+          5 . 결정 : CBT 복용 전후 몸무게 차이가 없다.<br>
 
-        : Wilcoxon Signed-Rank Test는 자료의 순서를 사용하여 자료의 중위수(median)가 0인지 검정.<br>
-        &nbsp;&nbsp;=> 양수인 데이터의 수와 음수인 데이터의 수가 같다면 중위수가 0이다.<br>
-
-      <li><a name = "예시"><strong>예시</strong></a></li><br>
-
-      <img src="1.png" align="middle"/>Prewt : CBT라는 약 복용 전 체중 , Postwt는 복용 후 체중<br>
-
-      <li><a name = "정규성검정"><strong>정규성검정</strong></a></li><br>
-      <img src="2.png" align="middle"/>=> p-value가 0.007945로 정규분포를 따른다는 귀무가설을 기각한다.<br>
-
-      <p>
-        1 . 귀무가설 : CBT 복용 전후 몸무게 차이가 정규분포를 따른다.<br>
-        2 . 대립가설 : CBT 복용 전후 몸무게 차이가 정규분포를 따르지 않는다.<br>
-        3 . 검정통계량 : W = 0.8962<br>
-        4 . p-value = 0.007945 < 0.05<br>
-        5 . 결정 : CBT 복용 전후 몸무게 차이가 정규분포를 따르지 않는다. => 즉 비모수 방법을 이용해야 한다.<br>
-      </p>
-
-      <li><a name = "차이의검정"><strong>차이의검정</strong></a></li><br>
-      <img src="3.png" align="middle"/>p-value = 0.06447로 유의하지 않은 결과가 나왔다.<br>
-      1 . 귀무가설 : CBT 복용 전후 몸무게 차이의 median은 0이다.<br>
-      2 . 대립가설 : CBT 복용 전후 몸무게 차이의 median은 0이 아니다.<br>
-      3 . 검정통계량 : V = 303.5<br>
-      4 . p-value = 0.06447 > 0.05<br>
-      5 . 결정 : CBT 복용 전후 몸무게 차이가 없다.<br>
-
-    </ol>
+        </ol>
+      </div>
+    </div>
 
   </body>
 

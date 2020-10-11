@@ -6,69 +6,76 @@
 
     <title>기본개념</title>
     <meta charset = 'utf-8'>
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css" />
 
   </head>
 
   <body>
 
     <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline">
+          <h2><a href = "../database.html" title = "database">Database</a></h2>
 
-    <h2><a href = "../database.html" title = "database">database</a></h2>
+          <ol>
 
-    <ol>
+            <li><a href = "1_기본개념.html"  title = "기본개념">기본개념</a></li>
+            <li><a href = "2_DBMS.html"  title = "DBMS">DBMS</a></li>
+            <li><a href = "3_데이터베이스 시스템.html"  title = "데이터베이스 시스템">데이터베이스 시스템</a></li>
+            <li><a href = "4_데이터모델링.html"  title = "데이터모델링">데이터모델링</a></li>
 
-      <li><a href = "1_기본개념.html"  title = "기본개념">기본개념</a></li>
-      <li><a href = "2_DBMS.html"  title = "DBMS">DBMS</a></li>
-      <li><a href = "3_데이터베이스 시스템.html"  title = "데이터베이스 시스템">데이터베이스 시스템</a></li>
-      <li><a href = "4_데이터모델링.html"  title = "데이터모델링">데이터모델링</a></li>
+          </ol>
+        </div>
+        <div id = "div-top">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol>
 
-    </ol>
+            <li><a href = "#1">Database의 정의</a></li>
+            <li><a href = "#2">Database의 특징</a></li>
+            <li><a href = "#3">데이터 종류</a></li>
 
-    <h3><a href = "1_기본개념.html"  title = "기본개념">기본개념</a></h3>
-
-    <ol>
-
-      <li><a href = "#1">Database의 정의</a></li>
-      <li><a href = "#2">Database의 특징</a></li>
-      <li><a href = "#3">데이터 종류</a></li>
-
-    </ol>
-
-      <p>
-
-        <li><a name = "1">Database의 정의</a></li>
+          </ol>
+        </div>
+      </div>
+      <div style = "padding-left : 20px;">
 
         <p>
-        &nbsp;&nbsp;&nbsp; : Database는 특정 조직의 여러 사용자가 '공유'하여 사용할 수 있도록 '통합'해서 '저장'한 '운영' 데이터의 집합<br><br>
+
+          <li><a name = "1">Database의 정의</a></li>
+
+          <p>
+          &nbsp;&nbsp;&nbsp; : Database는 특정 조직의 여러 사용자가 '공유'하여 사용할 수 있도록 '통합'해서 '저장'한 '운영' 데이터의 집합<br><br>
+          </p>
+
+          <li><a name = "2">Database의 특징</a></li>
+
+          <ol>
+            <li>데이터베이스는 실시간 접근이 가능하다.</li>
+            <li>데이터베이스는 계속 변화한다.</li>
+            <li>데이터베이스는 동시 공유가 가능하다.</li>
+            <li>데이터베이스는 내용으로 참조가 가능하다.</li>
+          </Ol>
+
+          <li><a name = "3">데이터 종류</a></li><br>
+
+          <ol>
+          <li>정형 데이터</li>
+          &nbsp;: 정형 데이터는 구조화된 데이터 , 즉 미리 정해진 구조에 따라 저장된 데이터.<br>
+          &nbsp;&nbsp;Ex) Excel , CSV , ...<br><br>
+
+          <li>반정형 데이터</li>
+          &nbsp;: 반정형 데이터는 구조에 따라 저장된 데이터이지만 정형 데이터와 달리 데이터 내용 안에 구조에 대한 설명이 함께 존재한다.<br>
+          &nbsp;&nbsp;Ex) HTML , XML , JSON ...<br><br>
+
+          <li>비정형 데이터</li>
+          &nbsp;: 비정형 데이터는 정해진 구조가 없이 저장된 데이터다.<br>
+          &nbsp;&nbsp;Ex) 텍스트 , 영상 , 이미지 , 워드 , PDF ...<br><br>
+          </ol>
+
         </p>
-
-        <li><a name = "2">Database의 특징</a></li>
-
-        <ol>
-          <li>데이터베이스는 실시간 접근이 가능하다.</li>
-          <li>데이터베이스는 계속 변화한다.</li>
-          <li>데이터베이스는 동시 공유가 가능하다.</li>
-          <li>데이터베이스는 내용으로 참조가 가능하다.</li>
-        </Ol>
-
-        <li><a name = "3">데이터 종류</a></li><br>
-
-        <ol>
-        <li>정형 데이터</li>
-        &nbsp;: 정형 데이터는 구조화된 데이터 , 즉 미리 정해진 구조에 따라 저장된 데이터.<br>
-        &nbsp;&nbsp;Ex) Excel , CSV , ...<br><br>
-
-        <li>반정형 데이터</li>
-        &nbsp;: 반정형 데이터는 구조에 따라 저장된 데이터이지만 정형 데이터와 달리 데이터 내용 안에 구조에 대한 설명이 함께 존재한다.<br>
-        &nbsp;&nbsp;Ex) HTML , XML , JSON ...<br><br>
-
-        <li>비정형 데이터</li>
-        &nbsp;: 비정형 데이터는 정해진 구조가 없이 저장된 데이터다.<br>
-        &nbsp;&nbsp;Ex) 텍스트 , 영상 , 이미지 , 워드 , PDF ...<br><br>
-        </ol>
-
-      </p>
-
+      </div>
+    </div>
   </body>
 
 </html>
