@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>딥러닝</title>
+    <meta charset = 'utf-8'>
+    <link rel = "stylesheet" type = "text/css" href = "../../../CSS/my_style.css"/>
+
+  </head>
+
+  <body>
+
+    <h1><a href = "../../../study.html" title = "study">공부</a></h1>
+    <div id = "div-columns">
+      <div id = "div-rows">
+        <div id = "div-inline">
+          <h2><a href = "../딥러닝.html" title = "딥러닝">딥러닝</a></h2>
+
+          <ol>
+            <li><a href = "단층퍼셉트론.html"  title = "단층퍼셉트론">단층퍼셉트론</a></li>
+          </ol>
+        </div>
+        <div id = "div-top" style = "font-size : 14px;">
+          <strong style = "font-size: 20px;">목차</strong>
+          <ol>
+            <li><a href = "#1">단층 퍼셉트론 신경망 구조</a></li>
+            <li><a href = "#2">tensor / mini_batch</a></li>
+            <li><a href = "#3">MSE</a></li>
+            <li><a href = "#4">경사하강법/역전파</a></li>
+            <li><a href = "#5">원-핫 벡터</a></li>
+          </ol>
+        </div>
+      </div>
+      <div>
+      <ol>
+        <li><a name = "1">단층 퍼셉트론 신경망 구조</a></li>
+          <p>
+            1 . parameter : 학습 과정 중에 끊임없이 변경되어 가면서 퍼셉트론의 동작 특성을 결정하는 값. ( ex : 가중치 , 편향 )<br>
+            &nbsp;&nbsp;==> P1 = x_1 * w_11 + x_2 * w_21 + .... ( x : 입력 값 , w : 가중치 , p : parameter )<br>
+            &nbsp;&nbsp;==> y1 = p1 + b1                        ( b : 편향 , y : 결과 )<br>
+          </p>
+        <li><a name = "2">tensor / mini_batch</a></li>
+          <p>
+            1 . tensor : 다차원 숫자 배열<br>
+            2 . mini_batch : 신경망이 여러 데이터를 한꺼번에 처리<br>
+            3 . hyper parameter : 학습 과정에서 변경되지 않으면서 신경망 구조나 학습결과에 영향을 미치는 고려 요인들.( ex : epoch , mini_batch_size )<br>
+            &nbsp;&nbsp;==> epoch : 학습 데이터 전체에 대한 한 차례 처리<br>
+          </p>
+        <li><a name = "3">MSE</a></li>
+          <p>
+            1 . MSE(mean squared error) : 출력 각 성분에 대해 추정값과 정답 사이에 차이인 오차를 제곱한 뒤 모두 합해 전체 성분 수로 나눈 값.<br>
+          </p>
+        <li><a name = "4">경사하강법/역전파</a></li>
+          <p>
+            1 . 경사하강법(gradient descent algorithm) : 함수의 기울기를 반복 계산하면서 이 기울기에 따라 함숫값이 낮아지는 방향으로 이동하는 알고리즘.<br>
+            &nbsp;&nbsp;==> 미니배치 입력 데이터에 대해 순전파와 역전파 과정을 번갈아 수행하는 과정을 반복하면서 신경망 parameter들을 원하는 방향으로 바꾼다.<br>
+            &nbsp;&nbsp;==> 순전파 : 입력 데이터에 대해 신경망 구조를 따라가면서 현재의 파라미터값들을 이용해 손실 함숫값을 계산하는 과정<br>
+            &nbsp;&nbsp;==> 역전파 : 순전파의 계산 과정을 역순으로 거슬러가면서 손실 함숫값에 직간접적으로 영향을 미친 모든 성분에 대하여 손실 기울기를 계산하는 과정<br>
+            &nbsp;&nbsp;==> 손실 기울기에 미리 정해진 학습률(learning rate)를 곱한 값을 빼서 파라미터값들을 변경한다.<br>
+          </p>
+        <li><a name = "5">원-핫 벡터</a></li>
+          <p>
+            1 . 원-핫 벡터(one-hot vector) : 비선형 정보를 항목별로 분할하여 해당 항목만 1 , 나미저는 0으로 나타내는 방식.<br>
+          </p>
+      </ol>
+    </div>
+  </div>
+
+
+
+  </body>
+</html>
